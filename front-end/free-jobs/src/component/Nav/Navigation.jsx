@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 export default function Navigation() {
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto flex flex-row items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full  bg-white shadow-sm">
+      <div className="max-w-screen-2xl mx-auto flex flex-row items-center justify-between px-20">
         <div className="flex flex-row items-center gap-20">
           <div className="flex flex-row items-center gap-3">
             <Link className="text-3xl font-bold">Free Jobs</Link>
