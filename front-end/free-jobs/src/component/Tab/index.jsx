@@ -26,7 +26,7 @@ export function Tabs({ tabsData }) {
         </div>
       </div>
       <div className="py-4">
-        <div className="mt-10 grid grid-cols-2 gap-4">
+        <div className="mt-10 grid grid-cols-2 gap-8">
           {[1, 2, 3, 4, 5, 6, 7, 8].map((_, i) => {
             return (
               <JobListing
