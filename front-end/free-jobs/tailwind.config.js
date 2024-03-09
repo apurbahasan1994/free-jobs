@@ -14,6 +14,9 @@ export default {
         "sidebar-color": "rgb(15, 23, 42)",
         "sidebar-link-active-color": "rgba(255, 255, 255, 0.12)",
       },
+      boxShadow: {
+        cutomShadow: "0 0 20px rgba(0,0,0,0.1)",
+      },
     },
   },
   plugins: [],
