@@ -9,7 +9,7 @@ import { MdHealthAndSafety } from "react-icons/md";
 import { Tabs } from "../component/Tab";
 export default function LandingPage() {
   return (
-    <div className="h-screen mx-auto">
+    <div>
       <div style={{ backgroundImage: "url('/src/assets/image/bg.png')" }}>
         <div className="max-w-screen-2xl mx-auto flex flex-row px-20 pb-20 justify-between items-center">
           <div className="flex flex-col gap-y-6">
