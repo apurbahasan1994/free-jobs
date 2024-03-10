@@ -299,7 +299,7 @@ export default function LandingPage() {
             </div>
             <div className="grid grid-cols-2 rounded-md overflow-hidden">
               <div className="bg-light-blue-color flex items-center pl-16">
-                <div className="flex flex-col gap-y-8 max-w-lg">
+                <div className="flex flex-col gap-y-8 max-w-lg py-10">
                   <div className="flex flex-col pl-8 gap-y-3 justify-between items-stretch relative group">
                     <div className="absolute h-full left-0 w-2 rounded-md  bg-gray-300 group-hover:bg-theme-color transition-all duration-300 ease-linear"></div>
                     <div className="text-2xl font-bold">
