@@ -176,6 +176,14 @@ export default function LandingPage() {
                 );
               })}
             </div>
+            <div className="flex items-center justify-center">
+              <Link
+                className="text-white bg-theme-color hover:bg-primary-700 outline-none  rounded-lg text-sm font-[600] px-8 py-3 text-center"
+                to="login"
+              >
+                Browse More
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -285,7 +293,7 @@ export default function LandingPage() {
 
       <div className="pt-[80px]">
         <div className="max-w-screen-2xl mx-auto">
-          <div className="flex flex-col gap-y-12">
+          <div className="px-20 flex flex-col gap-y-12">
             <div className="text-center text-[32px] font-bold text-text-color">
               Get the job {"that's"} right for you
             </div>
@@ -328,11 +336,19 @@ export default function LandingPage() {
               </div>
               <div className="relative">
                 <div className="absolute bg-white right-10 top-20 flex flex-col gap-y-2 p-6 text-center rounded-xl">
-                  <div className="text-[48px] font-bold leading-normal">
+                  <div className="text-[48px] font-bold leading-normal text-theme-color">
                     1800+
                   </div>
                   <div className="text-secondary-text-color text-lg font-semibold spacing tracking-2">
                     Candidates Applied
+                  </div>
+                </div>
+                <div className="absolute bg-white left-8 top-20 flex flex-col gap-y-2 p-6 text-center rounded-xl">
+                  <div className="text-[48px] font-bold leading-normal text-theme-color">
+                    289k+
+                  </div>
+                  <div className="text-secondary-text-color text-lg font-semibold spacing tracking-2">
+                    Companies Hiring
                   </div>
                 </div>
                 <img src={candidate} className="object-cover w-full h-full" />
