@@ -13,10 +13,17 @@ export default {
         "dark-blue": "#0d6efd",
         "sidebar-color": "rgb(15, 23, 42)",
         "sidebar-link-active-color": "rgba(255, 255, 255, 0.12)",
+        "hero-bg-color": "#123841",
+        "theme-color": "#14A077",
+        "light-theme-color": "rgba(20, 160, 119, 0.15)",
       },
       boxShadow: {
         cutomShadow: "0 0 20px rgba(0,0,0,0.1)",
+        testmonialShadow: "0px 10px 25px rgba(54,95,104,0.1)",
       },
+      lineHeight:{
+        'normal':'1.2'
+      }
     },
   },
   plugins: [],

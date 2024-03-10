@@ -62,7 +62,7 @@ export default function Register() {
               </div>
               <button
                 type="submit"
-                className="w-full text-white bg-blue-color hover:bg-primary-700 outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                className="w-full text-white bg-theme-color hover:bg-primary-700 outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 Sign Up
               </button>

@@ -14,7 +14,7 @@ export function Tabs({ tabsData }) {
                 key={idx}
                 className={`py-2 font-bold border-b-4 transition-colors duration-300 ${
                   idx === activeTabIndex
-                    ? "border-blue-color"
+                    ? "border-theme-color"
                     : "border-transparent hover:border-gray-200"
                 }`}
                 onClick={() => setActiveTabIndex(idx)}
