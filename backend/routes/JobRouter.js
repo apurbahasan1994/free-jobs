@@ -4,15 +4,15 @@ import {
   editJob,
   getJob,
   getJobs,
-  createJob
-} from "../controllers/JobController.js";
+  createJob,
+} from "../Controllers/JobController.js";
+import { validateJobInput,validateIdParam } from "../Middlewares/ValidationMiddleWare.js";
 const router = Router();
 
-
-router.get('/',getJobs);
-router.get('/:id',getJob);
-router.post('/',createJob);
-router.patch('/:id',editJob);
-router.delete('/:id',deleteJob);
+router.get("/", getJobs);
+router.get("/:id", validateIdParam, getJob);
+router.post("/", validateJobInput, createJob);
+router.patch("/:id", validateJobInput, editJob);
+router.delete("/:id", validateIdParam, deleteJob);
 
 export default router;

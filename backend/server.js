@@ -8,6 +8,8 @@ import express from "express";
 import morgan from "morgan";
 import mongoose from "mongoose";
 import jobRouter from "./routes/JobRouter.js";
+import authRouter from './routes/AuthRouter.js';
+import errorHandlerMiddleWare from './Middlewares/ErrorHandler.js';
 const port = process.env.PORT || 4000;
 const app = express();
 
@@ -19,14 +21,13 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json());
 
 app.use("/api/v1/jobs", jobRouter);
+app.use("/api/v1/auth", authRouter);
 
 app.use("*", (req, res) => {
   res.status(404).send({ message: "Not fond" });
 });
 
-app.use((err, req, res, next) => {
-  res.status(500).json({ message: "Something went wrong" });
-});
+app.use(errorHandlerMiddleWare);
 
 try {
   await mongoose.connect(process.env.MONGO_URL, {
