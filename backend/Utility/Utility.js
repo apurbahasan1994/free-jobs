@@ -1,3 +1,5 @@
+import bcrypt from "bcryptjs";
+
 export const JOB_STATUS = Object.freeze({
   PENDING: "pending",
   INTERVIEW: "interview",
@@ -22,3 +24,9 @@ export const USER_ROLES = Object.freeze({
   COMPANY: "company",
   USER: "user",
 });
+
+export const hashPassword = async (password, salt = 10) => {
+  const salt = await bcrypt.genSalt(salt);
+  const hashedPassword = await bcrypt.hash(password, salt);
+  return hashedPassword;
+};
