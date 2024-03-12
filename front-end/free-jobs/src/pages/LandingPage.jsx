@@ -42,7 +42,7 @@ export default function LandingPage() {
                 Find Jobs, Employment & Career Opportunities
               </div>
             </div>
-            <div className="flex flex-row rounded-lg overflow-hidden border-[1px] py-7 px-5 bg-white text-secondary-text-color">
+            <div className="flex flex-row justify-between items-center rounded-lg overflow-hidden border-[1px] py-4 px-4 bg-white text-secondary-text-color">
               <div className="flex flex-row">
                 <div className="border-r-[1px] px-4 flex flex-row items-center gap-2">
                   <CiSearch className="text-xl font-bold text-secondary-text-color" />
