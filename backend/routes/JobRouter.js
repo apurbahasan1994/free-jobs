@@ -6,13 +6,17 @@ import {
   getJobs,
   createJob,
 } from "../Controllers/JobController.js";
-import { validateJobInput,validateIdParam } from "../Middlewares/ValidationMiddleWare.js";
+import {
+  validateJobInput,
+  validateIdParam,
+} from "../Middlewares/ValidationMiddleWare.js";
+import { authMiddleware } from "../Middlewares/AuthMiddleware.js";
 const router = Router();
 
-router.get("/", getJobs);
-router.get("/:id", validateIdParam, getJob);
-router.post("/", validateJobInput, createJob);
-router.patch("/:id", validateJobInput, editJob);
-router.delete("/:id", validateIdParam, deleteJob);
+router.get("/", authMiddleware, getJobs);
+router.get("/:id", authMiddleware, validateIdParam, getJob);
+router.post("/", authMiddleware, validateJobInput, createJob);
+router.patch("/:id", authMiddleware, validateJobInput, editJob);
+router.delete("/:id", authMiddleware, validateIdParam, deleteJob);
 
 export default router;

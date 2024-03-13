@@ -15,14 +15,14 @@ export class BadRequestError extends HttpError {
   }
 }
 
-export class UnauthorizedError extends HttpError {
-  constructor(message = "Unauthorized") {
+export class UnauthenticatedError extends HttpError {
+  constructor(message = "Unauthenticated") {
     super(message, StatusCodes.UNAUTHORIZED);
   }
 }
 
-export class ForbiddenError extends HttpError {
-  constructor(message = "Forbidden") {
+export class UnauthorizedError extends HttpError {
+  constructor(message = "UnauthorizedError") {
     super(message, StatusCodes.FORBIDDEN);
   }
 }

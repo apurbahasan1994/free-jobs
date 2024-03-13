@@ -10,6 +10,13 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  email: {
+    type: String,
+    unique: true,
+    trim: true,
+    lowercase: true,
+    required: true,
+  },
   password: {
     type: String,
     required: true,
@@ -24,6 +31,14 @@ const UserSchema = new mongoose.Schema({
     default: USER_ROLES.USER,
   },
 });
+
+// method to transform the document before sending it as JSON
+userSchema.methods.toJSON = function () {
+  const obj = this.toObject();
+  // Exclude the password field from the JSON representation
+  delete obj.password;
+  return obj;
+};
 
 const User = mongoose.model("User", UserSchema);
 export default User;
